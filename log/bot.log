@@ -1,0 +1,10 @@
+2026-02-14 06:38:19,825 | Запуск приложения
+2026-02-14 06:38:19,825 | Запуск бота!
+2026-02-14 06:38:20,452 | Start polling
+2026-02-14 06:38:20,560 | Run polling for bot @ImkobUzNewbot id=8570973938 - 'ImkonTimesheet'
+2026-02-14 06:38:37,566 | Update id=802017184 is handled. Duration 647 ms by bot id=8570973938
+2026-02-14 06:38:48,356 | Polling stopped
+2026-02-14 06:38:48,606 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-02-14 06:38:48,606 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8570973938)
+2026-02-14 06:38:48,860 | Polling stopped for bot @ImkobUzNewbot id=8570973938 - 'ImkonTimesheet'
+2026-02-14 06:38:48,862 | Бот остановлен!
