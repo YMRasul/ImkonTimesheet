@@ -68,7 +68,7 @@ async def report1(message: types.Message,current_date,rp):
 #-----------------------------------------------------------------------------------------------
 async def spis(message: types.Message,current_date):
     # Загружаем файл
-    path = PATH1 + 'Coworkers.xlsx'
+    path = PATH1 + 'coworkers.xlsx'
     wb = openpyxl.load_workbook(path, data_only=True)
     sheet = wb.active
 
@@ -108,7 +108,7 @@ async def keldi_ketdi(message: types.Message,datdav):
     davm.append(f"{datdav} учун келди-кетди руйхати")
     txt = []
     # Загружаем файл
-    path = PATH1 + 'Coworkers.xlsx'
+    path = PATH1 + 'coworkers.xlsx'
     wb = openpyxl.load_workbook(path, data_only=True)
     sheet = wb.active
 
