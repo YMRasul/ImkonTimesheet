@@ -1,8 +1,10 @@
+import os
 from aiogram import F, Router, types  # F - это magic фильтр
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message,ReplyKeyboardMarkup, KeyboardButton
 from dbase import Database
-from config import DBASE,RADIUS,WORKING_START,WORKING_END,PATH1
+from config import RADIUS,WORKING_START,WORKING_END
+from confvar import DBASE
 import openpyxl
 
 #-----------------------------------
@@ -146,7 +148,8 @@ async def send_phone_request(message: types.Message):
 async def saveUser(message,contact):
     print(f"{message.from_user.id}  {message.from_user.full_name} {contact.phone_number}")
     # Загружаем файл
-    path = PATH1 + 'Coworkers.xlsx'
+    path = os.path.join("xls", "coworkers.xlsx")
+    print(f"{path=}")
     wb = openpyxl.load_workbook(path, data_only=True)
     sheet = wb.active
     data = [list(row) for row in sheet.iter_rows(values_only=True)]  # Превращаем строки в список списков

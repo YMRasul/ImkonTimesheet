@@ -9,7 +9,7 @@ from dbase import dbase_start
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram import Bot, Dispatcher
-from config import TOKEN,LOG
+from config import TOKEN
 
 async def on_startup():
     await bot.send_message(chat_id=139204666, text='Бот запущен!')

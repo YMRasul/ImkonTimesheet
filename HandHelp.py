@@ -1,5 +1,5 @@
 from aiogram import Router,F
-from config import superadmin,DBASE
+from config import superadmin
 from aiogram.filters import Command
 #----------------------------
 routerHelp = Router()

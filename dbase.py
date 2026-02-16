@@ -1,6 +1,6 @@
 import aiosqlite   #pip install aiosqlite
 import asyncio
-from config import DBASE
+from confvar import DBASE
 
 async def dbase_start():
     print(f"{DBASE=}")

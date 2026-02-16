@@ -1,5 +1,5 @@
 from dbase import Database
-from config import DBASE,PRIX,FORA,ADMIN
+from config import PRIX,FORA,ADMIN
 from aiogram.types import Message
 
 async def DefUser(bot,message: Message,iduser,idp,dat,tim,minit,minit1,namp,name,dolj):

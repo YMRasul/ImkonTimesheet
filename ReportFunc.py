@@ -1,10 +1,11 @@
 import openpyxl
 from aiogram import types
-from config import PATH2,PATH1,PATH3,DBASE,FORA
+from config import FORA
 from dbase import Database
 import pandas as pd
 from config import superadmin,ADMIN
 from aiogram.types import FSInputFile
+from confvar import DBASE,PATH1,PATH2,PATH3
 
 async def report1(message: types.Message,current_date,rp):
     x = f"{rp}-отчет по приходу"

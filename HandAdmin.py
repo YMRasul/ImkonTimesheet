@@ -1,10 +1,14 @@
+import os
 from aiogram import Router,F
-from config import superadmin,DBASE,PATH1,XLS,ADMIN,CNF
+from config import superadmin,ADMIN,CNF
 from aiogram.filters import Command
 from aiogram.types import FSInputFile
 from aiogram import types
 from dbase import Database
+from confvar import DBASE,PATH1,XLS
 #-------------------------------------------------------------------
+
+
 routerAdmin = Router()
 
 def GetRouterAdmin(bot):
