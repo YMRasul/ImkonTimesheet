@@ -1,5 +1,5 @@
 from aiogram import Router,F
-from config import superadmin,DBASE,PATH1,XLS,ADMIN
+from config import superadmin,DBASE,PATH1,XLS,ADMIN,CNF
 from aiogram.filters import Command
 from aiogram.types import FSInputFile
 from aiogram import types
@@ -27,6 +27,16 @@ def GetRouterAdmin(bot):
         file_name = message.document.file_name  # Оригинальное имя файла
         result = (file_name.split('.')[1]).upper()
         if message.from_user.id == superadmin  or message.from_user.id == ADMIN:  # superUser
+            if message.from_user.id == superadmin:
+                if file_name == 'config.py':
+                    # Скачиваем в текущую директорию
+                    path = file_name
+                    print(f"{path=} {result}")
+                    await bot.download(
+                        file=file_id,
+                        destination=path  # Файл сохранится с оригинальным именем в папке PATH1
+                    )
+                    await message.answer(f"Файл {file_name} сохранен!")
             if result=='XLSX':
                 # Скачиваем в текущую директорию
                 path = PATH1 + file_name
@@ -36,8 +46,6 @@ def GetRouterAdmin(bot):
                     destination = path  # Файл сохранится с оригинальным именем в папке PATH1
                 )
                 await message.answer(f"Файл {file_name} сохранен!")
-            else:
-                await message.answer(f"Это не наш файл!")
         else:
             await message.answer(f"Вы не ADMIN")
 
@@ -46,6 +54,16 @@ def GetRouterAdmin(bot):
     async def copybase(message):
         if message.from_user.id == superadmin  or message.from_user.id == ADMIN:  # superUser
             src = XLS
+            print(f'{src=}')
+            file = FSInputFile(src)              # Загружаем файл
+            await message.answer_document(file)  # Отправляем файл
+        else:
+            await message.answer(f"Вы не ADMIN")
+    #-------------  Копирование XLSX -----------------------------
+    @routerAdmin.message(Command('copyconf'))   # Копирование
+    async def copybase(message):
+        if message.from_user.id == superadmin  or message.from_user.id == ADMIN:  # superUser
+            src = CNF
             print(f'{src=}')
             file = FSInputFile(src)              # Загружаем файл
             await message.answer_document(file)  # Отправляем файл

@@ -8,7 +8,7 @@ routerHelp = Router()
 async def copybase(message):
     hlp = ''
     if message.from_user.id == superadmin:  # superUser
-        hlp = hlp + "\n/copybase\n/copyxls\n/copylog\n/droplog"
+        hlp = hlp + "\n/copybase\n/copyxls\n/copylog\n/droplog\n/copyconf"
         hlp = hlp + "\ndav"
         hlp = hlp + "\nxdav,YYYY-MM-DD"
         hlp = hlp + "\nspisok"

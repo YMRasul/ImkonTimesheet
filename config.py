@@ -1,5 +1,6 @@
 DBASE = ".\\db\\kadr.db"
 XLS = ".\\xls\\coworkers.xlsx"
+CNF = ".\\config.py"
 LOG = ".\\log\\bot.log"
 PATH1 = ".\\xls\\"
 PATH2 = ".\\files\\"
@@ -12,3 +13,4 @@ PRIX = 240
 RADIUS = 60
 superadmin = 139204666
 ADMIN = 139204666
+1111111111111111111111111
