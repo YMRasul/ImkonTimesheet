@@ -11,4 +11,3 @@ ENV/
 txt/
 env.bak/
 venv.bak/
-config.py
